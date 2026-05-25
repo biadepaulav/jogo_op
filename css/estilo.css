@@ -1,0 +1,164 @@
+*{
+    background-color: rgb(73, 15, 15);
+    color: antiquewhite;
+
+}
+
+nav ul{
+    background-color: rgb(73, 15, 15);
+    list-style: none;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+nav ul li{
+    background-color: rgb(73, 15, 15);
+    margin-left: 20px;
+}
+nav ul li a{
+    background-color: rgb(73, 15, 15);
+    color: rgb(154, 168, 96);
+    text-decoration: none;
+}
+a:hover{
+    background-color: steelblue;
+
+}
+header .container{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.logo{
+    font-size: 2em;
+    font-weight: bold;
+}
+
+
+.banner{
+background: url(../img/banner2.jpg) no-repeat center/cover;
+height: 400px;
+display: flex;
+margin-top: 100px;
+align-items: center;
+justify-content: center; 
+color: rgb(255, 255, 255);
+font-size: 1.5em;
+text-align: center;
+text-shadow: 8px 2px 5px #6495ED;
+}
+
+hvfjsdvfjhdsfsn
+
+
+.container{
+    max-width: 1300px;
+    margin: auto;
+    padding: 20px;      
+}
+
+section{
+    scroll-margin-top: 120px;
+}
+
+header{
+    background-color: rgb(73, 15, 15);
+    color: rgba(223, 154, 108, 0.842);
+    padding: 15px 15px 15px 15px;
+    width: 100%;
+    top: 0;
+    position: fixed;
+    z-index: 1000;
+}
+
+
+header .container{
+    display: flex;
+    justify-content:space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    padding: 5px;
+}
+
+.banner{
+height: 290px;
+width: 1000px;
+display: flex;
+margin-top: 100px;
+align-items: center;
+justify-content: center; 
+
+
+
+}
+
+@media (max-width: 766px){
+    header{
+        padding: 5px;
+    }
+
+    header .container, .sobre-container{
+        flex-direction: column;
+        text-align: center;
+        scroll-margin-top: 240px;
+    }
+    
+    nav ul{
+        margin-top: 10px;
+        flex-direction: column;
+        padding: 0px;
+    }
+
+    nav ul li{
+        padding: 0px;
+        margin: 0px;
+        font-size: 10px;
+    }
+
+    nav ul li a{
+        font-size: 20px;
+    }
+
+    .banner{
+        height: 550px;
+        padding-top: 300px ;
+    }
+}
+
+@media (max-width: 540px){
+
+    table {
+        overflow-x: auto;
+        font-family: arial, sans-serif;
+        border-collapse: collapse;
+        width: 9%;
+    }
+      
+    td, th {
+        background-color: #f1bb96;
+        border: 2px solid #dddddd;
+        text-align: left;
+        padding: 2px;
+    }
+
+}
+
+@media (max-width:381px){
+    header .container, .sobre-container{
+        flex-direction: column;
+        text-align: center;
+        scroll-margin-top: 240px;
+    }
+    
+    nav ul{
+        margin-top: 10px;
+        flex-direction: column;
+    }
+
+    .banner{
+        height: 50rem;
+    }
+
+}
