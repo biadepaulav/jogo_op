@@ -1,4 +1,6 @@
 *{
+    margin: 0;
+    padding: 0;
     background-color: rgb(73, 15, 15);
     color: antiquewhite;
 
@@ -36,21 +38,23 @@ header .container{
     font-weight: bold;
 }
 
+#inicio{
+    margin-top: 90px;}
 
 .banner{
-background: url(../img/banner2.jpg) no-repeat center/cover;
-height: 400px;
+background: url(../img/banner.jpg) no-repeat center/cover;
+height: 440px;
+width: 100%;
 display: flex;
-margin-top: 100px;
+margin-top: 1px;
 align-items: center;
 justify-content: center; 
 color: rgb(255, 255, 255);
-font-size: 1.5em;
+font-size: 2em;
 text-align: center;
 text-shadow: 8px 2px 5px #6495ED;
 }
 
-hvfjsdvfjhdsfsn
 
 
 .container{
@@ -82,17 +86,53 @@ header .container{
     padding: 5px;
 }
 
-.banner{
-height: 290px;
-width: 1000px;
-display: flex;
-margin-top: 100px;
-align-items: center;
-justify-content: center; 
 
+/* JOGO */
+* { box-sizing: border-box; }
 
-
+.carrossel-container {
+    position: relative;
+    max-width: 600px;
+    margin: 50px auto;
+    display: flex;
+    align-items: center;
 }
+
+.slides-wrapper {
+    overflow: hidden; /* Esconde as imagens que saem da caixa */
+    width: 100%;
+    border-radius: 10px;
+}
+
+.slides {
+    display: flex; /* Coloca as imagens uma do lado da outra */
+    transition: transform 0.5s ease-in-out; /* Suaviza a transição */
+    width: 100%;
+}
+
+.slides img {
+    width: 100%;
+    min-width: 100%;
+    object-fit: cover;
+}
+
+.botao-controle {
+    position: absolute;
+    background-color: rgba(0, 0, 0, 0.5);
+    color: white;
+    border: none;
+    padding: 15px;
+    cursor: pointer;
+    font-size: 18px;
+    z-index: 10;
+}
+
+#prev { left: 10px; }
+#next { right: 10px; }
+
+
+
+
 
 @media (max-width: 766px){
     header{
