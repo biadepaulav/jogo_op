@@ -1,24 +1,25 @@
 *{
     margin: 0;
     padding: 0;
-    background-color: rgb(73, 15, 15);
     color: antiquewhite;
+    box-sizing: border-box;
+}
 
+body{
+    
+    background-color: rgb(73, 15, 15);
 }
 
 nav ul{
-    background-color: rgb(73, 15, 15);
     list-style: none;
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
 }
 nav ul li{
-    background-color: rgb(73, 15, 15);
     margin-left: 20px;
 }
 nav ul li a{
-    background-color: rgb(73, 15, 15);
     color: rgb(154, 168, 96);
     text-decoration: none;
 }
@@ -26,12 +27,34 @@ a:hover{
     background-color: steelblue;
 
 }
+
+header{
+    background-color: rgb(59, 19, 19);
+    color: rgba(223, 154, 108, 0.842);
+    padding: 15px 15px 15px 15px;
+    width: 100%;
+    top: 0;
+    position: fixed;
+    z-index: 1000;
+}
+
+
+.container{
+    max-width: 1300px;
+    margin: auto;
+    padding: 20px;      
+}
+
+
 header .container{
     display: flex;
     justify-content: space-between;
     align-items: center;
     flex-wrap: wrap;
+    padding: 5px;
 }
+
+
 
 .logo{
     font-size: 2em;
@@ -56,34 +79,8 @@ text-shadow: 8px 2px 5px #6495ED;
 }
 
 
-
-.container{
-    max-width: 1300px;
-    margin: auto;
-    padding: 20px;      
-}
-
 section{
     scroll-margin-top: 120px;
-}
-
-header{
-    background-color: rgb(73, 15, 15);
-    color: rgba(223, 154, 108, 0.842);
-    padding: 15px 15px 15px 15px;
-    width: 100%;
-    top: 0;
-    position: fixed;
-    z-index: 1000;
-}
-
-
-header .container{
-    display: flex;
-    justify-content:space-between;
-    align-items: center;
-    flex-wrap: wrap;
-    padding: 5px;
 }
 
 
@@ -130,9 +127,45 @@ header .container{
 #prev { left: 10px; }
 #next { right: 10px; }
 
+/* meu carrossel */
 
+.container-slider{
+    display: flex;
+    width: 100%;
+    min-width: 100vh;
+    align-items: center;
+    justify-content: center;
+    gap: 1rem;
+}
 
+.container-imgs{
+    display: flex;
+    width: 400px;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+}
 
+.slider {
+    opacity: 0;
+    transition: opacity .2s;
+    position: absolute;
+    width: 100%;
+    border-radius: 10px;
+}
+
+.on {
+    opacity: 1;
+}
+
+#prev-button, #next-button {
+    background-color: rgba(0, 0, 0, 0.5);
+    color: white;
+    border: none;
+    cursor: pointer;
+    width: 30px;
+    height: 30px;
+}
 
 @media (max-width: 766px){
     header{
