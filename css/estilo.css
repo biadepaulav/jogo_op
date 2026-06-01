@@ -85,87 +85,190 @@ section{
 
 
 /* JOGO */
-* { box-sizing: border-box; }
-
-.carrossel-container {
-    position: relative;
-    max-width: 600px;
-    margin: 50px auto;
-    display: flex;
-    align-items: center;
+body {
+    font-family: 'Segoe UI', Arial, sans-serif;
+    min-height: 100vh;
 }
 
-.slides-wrapper {
-    overflow: hidden; /* Esconde as imagens que saem da caixa */
-    width: 100%;
-    border-radius: 10px;
+.game-container {
+    max-width: 1500px;
+    margin: 0 auto;
+    border-radius: 20px;
+    padding: 20px;
+    box-shadow: 0 10px 40px rgba(0, 0, 0, 0.342);
 }
 
-.slides {
-    display: flex; /* Coloca as imagens uma do lado da outra */
-    transition: transform 0.5s ease-in-out; /* Suaviza a transição */
-    width: 100%;
+h1 {
+    text-align: center;
+    margin-bottom: 20px;
+    font-size: 28px;
 }
 
-.slides img {
-    width: 100%;
-    min-width: 100%;
-    object-fit: cover;
+li {
+    margin-left: 20px;
+    margin-bottom: 10px;
+    font-size: 16px;
+    color: #ddd;
 }
 
-.botao-controle {
-    position: absolute;
-    background-color: rgba(0, 0, 0, 0.5);
-    color: white;
-    border: none;
+.target-box {
+    background:#af2a2a;
+    border-radius: 15px;
     padding: 15px;
-    cursor: pointer;
-    font-size: 18px;
-    z-index: 10;
+    text-align: center;
+    margin-bottom: 20px;
+    color: white;
 }
 
-#prev { left: 10px; }
-#next { right: 10px; }
+.target-label {
+    font-size: 14px;
+    opacity: 0.9;
+}
 
-/* meu carrossel */
+.target-name {
+    font-size: 32px;
+    font-weight: bold;
+    margin-top: 5px;
+    text-transform: uppercase;
+}
 
-.container-slider{
+.info-panel {
     display: flex;
-    width: 100%;
-    min-width: 100vh;
-    align-items: center;
-    justify-content: center;
-    gap: 1rem;
+    justify-content: space-between;
+    gap: 15px;
+    margin-bottom: 30px;
 }
 
-.container-imgs{
-    display: flex;
-    width: 400px;
-    align-items: center;
-    justify-content: center;
-    position: relative;
-}
-
-.slider {
-    opacity: 0;
-    transition: opacity .2s;
-    position: absolute;
-    width: 100%;
+.info-item {
+    background: #38090b;
+    padding: 12px;
     border-radius: 10px;
+    text-align: center;
+    font-weight: bold;
+    font-size: 18px;
+    flex: 1;
 }
 
-.on {
-    opacity: 1;
+.carousel-section {
+    background: #38090b;
+    border-radius: 15px;
+    padding: 20px;
+    margin-bottom: 25px;
 }
 
-#prev-button, #next-button {
-    background-color: rgba(0, 0, 0, 0.5);
+.carousel-title {
+    text-align: center;
+    font-weight: bold;
+    font-size: 20px;
+    color: #555;
+    margin-bottom: 15px;
+}
+
+.carousel-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 15px;
+}
+
+.carousel {
+    width: 300px;
+    height: 300px;
+    overflow: hidden;
+    border-radius: 10px;
+    background: rgb(255, 0, 0);
+    box-shadow: 0 3px 10px rgba(0,0,0,0.1);
+}
+
+.carousel-track {
+    display: flex;
+    transition: transform 0.3s ease;
+    height: 100%;
+}
+
+.carousel-item {
+    min-width: 300px;
+    height: 300px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: rgba(58, 58, 58, 0.616);
+}
+
+.carousel-item img {
+    max-width: 90%;
+    max-height: 90%;
+    object-fit: contain;
+}
+
+.carousel-btn {
+    background: #961414;
     color: white;
     border: none;
+    width: 45px;
+    height: 45px;
+    border-radius: 50%;
     cursor: pointer;
-    width: 30px;
-    height: 30px;
+    font-size: 20px;
+    transition: transform 0.2s;
 }
+
+.carousel-btn:hover {
+    transform: scale(1.1);
+    background: #764ba2;
+}
+
+.message {
+    text-align: center;
+    padding: 15px;
+    margin: 20px 0;
+    border-radius: 10px;
+    font-weight: bold;
+    font-size: 18px;
+}
+
+.message.win {
+    background: #4caf50;
+    color: white;
+}
+
+.reset-btn {
+    width: 100%;
+    padding: 15px;
+    background: #961414;
+    color: white;
+    border: none;
+    border-radius: 10px;
+    font-size: 18px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: transform 0.2s;
+}
+
+.reset-btn:hover {
+    transform: scale(1.02);
+    background: #c92a2a;
+}
+
+@media (max-width: 768px) {
+    .carousel {
+        width: 200px;
+        height: 200px;
+    }
+    .carousel-item {
+        min-width: 200px;
+        height: 200px;
+    }
+    .carousel-btn {
+        width: 35px;
+        height: 35px;
+        font-size: 16px;
+    }
+    .target-name {
+        font-size: 24px;
+    }
+}
+
 
 @media (max-width: 766px){
     header{

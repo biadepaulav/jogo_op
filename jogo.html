@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="css/estilo.css">
     <script src="script.js" defer></script>
-    <title>- Ordo Realitas -</title>
+    <title>- Monte o personagem -</title>
 </head>
 <body>
     <header>
@@ -23,44 +23,67 @@
     </header>
     <section id="home" class="banner">
 	</section>
-    <main>
-        <section id="sobre">
-            <h1>Sobre</h1>
-            <h3>Jogo</h3>
-            <h3>equipe</h3>
-        </section>
-        <div>
-            <h1>Jogo</h1>
+    
+<main>
+    <div class="game-container">
+        <h1>MONTE O PERSONAGEM</h1>
+        <li>O jogo escolhe um personagem aleatório para você montar</li>
+        <li>Use as setas para girar os 3 carrosséis</p>
+        <li>Encontre a cabeça, corpo e pernas do personagem correto</li>
+        <li>Quando todas as 3 partes combinarem, você vence!</li>
+        
+        <div class="target-box">
+            <div class="target-label">PERSONAGEM PARA MONTAR:</div>
+            <div class="target-name" id="targetCharacter">---</div>
         </div>
-        <div>
-            <div class="carrossel-container">
-                <button id="prev" class="botao-controle">&#10094;</button>
 
-                <div class="slides-wrapper">
-                    <div class="slides">
-                        <img src="img/dante.jpg/1.jpg" alt="Imagem 1">
-                        <img src="img/dante.jpg/2.jpg" alt="Imagem 2">
-                        <img src="img/dante.jpg/3.jpg" alt="Imagem 3">
-                    </div>
+        <div class="info-panel">
+            <div class="info-item">⏱️ TEMPO: <span id="timer">0.00</span>s</div>
+            <div class="info-item">🎲 MOVIMENTOS: <span id="moves">0</span></div>
+        </div>
+
+        <!-- Carrossel Cabeça -->
+        <div class="carousel-section">
+            <div class="carousel-title">CABEÇA</div>
+            <div class="carousel-container">
+                <button class="carousel-btn prev" data-part="cabeca">◀</button>
+                <div class="carousel">
+                    <div class="carousel-track" id="trackCabeca"></div>
                 </div>
-
-                <button id="next" class="botao-controle">&#10095;</button>
+                <button class="carousel-btn next" data-part="cabeca">▶</button>
             </div>
-
         </div>
 
-
-        <!-- meu -->
-         <div class="container-slider">
-            <button id="prev-button">&#10094;</button>
-            <div class="container-imgs">
-                <img src="img/gal.jpg/1.jpg" alt="" class="slider on">
-                <img src="img/liz.jpg/1.jpg" alt="" class="slider">
-                <img src="img/mia.jpg/1.jpg" alt="" class="slider">
+        <!-- Carrossel tronco -->
+        <div class="carousel-section">
+            <div class="carousel-title">TRONCO</div>
+            <div class="carousel-container">
+                <button class="carousel-btn prev" data-part="corpo">◀</button>
+                <div class="carousel">
+                    <div class="carousel-track" id="trackCorpo"></div>
+                </div>
+                <button class="carousel-btn next" data-part="corpo">▶</button>
             </div>
-            <button id="next-button">&#10095;</button>
-         </div>
-    </main>
+        </div>
+
+        <!-- Carrossel Perna -->
+        <div class="carousel-section">
+            <div class="carousel-title">PERNAS</div>
+            <div class="carousel-container">
+                <button class="carousel-btn prev" data-part="perna">◀</button>
+                <div class="carousel">
+                    <div class="carousel-track" id="trackPerna"></div>
+                </div>
+                <button class="carousel-btn next" data-part="perna">▶</button>
+            </div>
+        </div>
+
+        <div id="message" class="message"></div>
+        <button id="resetBtn" class="reset-btn">NOVO JOGO</button>
+    </div>
+
+    <script src="script.js"></script>
+</main>
 </body>
 <footer>Desenvolvido por Beatriz e Isabelly - todos os direitos reservados</footer>
 </html>
