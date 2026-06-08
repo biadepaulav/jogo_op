@@ -6,8 +6,8 @@
 }
 
 footer{
-    background-color: black;
     color: white;
+    margin-top: 80px;
 }
 
 body{
@@ -34,7 +34,7 @@ a:hover{
 }
 
 header{
-    background-color: rgb(59, 19, 19);
+    background-color: #3b1313;
     color: rgba(223, 154, 108, 0.842);
     padding: 15px 15px 15px 15px;
     width: 100%;
@@ -96,24 +96,14 @@ section{
     scroll-margin-top: 120px;
 }
 
-
-/* JOGO */
 body {
     font-family: 'Segoe UI', Arial, sans-serif;
     min-height: 100vh;
 }
 
-.game-container {
-    max-width: 1500px;
-    margin: 0 auto;
-    border-radius: 20px;
-    padding: 20px;
-    box-shadow: 0 10px 40px rgba(0, 0, 0, 0.342);
-}
-
 h1 {
     text-align: center;
-    margin-bottom: 20px;
+    margin: 20px;
     font-size: 28px;
 }
 
@@ -122,6 +112,26 @@ li {
     margin-bottom: 10px;
     font-size: 16px;
     color: #ddd;
+
+}
+
+/* texto */
+.texto {
+    background: rgb(68, 10, 13);
+    border-radius: 15px;
+    padding: 20px;
+    margin-bottom: 30px;
+    max-width: 1500px;
+    box-shadow: #000000 10px 25px 40px;
+}
+
+/* pro jogo */
+.game-container {
+    max-width: 1500px;
+    margin: 40px auto;
+    border-radius: 20px;
+    padding: 20px;
+    box-shadow: 0 10px 40px rgba(0, 0, 0, 0.342);
 }
 
 .target-box {
@@ -261,6 +271,12 @@ li {
 .reset-btn:hover {
     transform: scale(1.02);
     background: #c92a2a;
+}
+
+/* contato */
+.contato {
+    text-align: center;
+    max-width: 300px;
 }
 
 @media (max-width: 768px) {
